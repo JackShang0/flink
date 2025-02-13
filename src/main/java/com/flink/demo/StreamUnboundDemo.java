@@ -20,7 +20,7 @@ public class StreamUnboundDemo {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
         // 2.读取数据
-        DataStreamSource<String> streamSource = env.socketTextStream("flink", 7777);
+        DataStreamSource<String> streamSource = env.socketTextStream("localhost", 7777);
 
         // 3.处理数据：切分、转换、聚合
         streamSource
